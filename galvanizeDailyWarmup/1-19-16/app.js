@@ -9,15 +9,15 @@ app.controller("MyFirstController", function($scope) {
 app.controller("ExercisesController", function($scope) {
   $scope.favoriteColor = "#482ab2";
   $scope.secondsInACentury = 60 * 60 * 24 * 365 * 100;
-  // $scope.rightMeow = new Date();
-  // $scope.boyname = "BOY'S NAME";
-  // $scope.adjective = 'ADJECTIVE';
-  // $scope.pluralnounone = 'PLURAL NOUN';
-  // $scope.pluralnountwo= 'PLURAL NOUN';
-  // $scope.insects = 'INSECT, PLURAL';
-  // $scope.pluralnounthree = 'PLURAL NOUN';
-  // $scope.verbed = 'VERB ENDING IN "ED"';
-  // $scope.body = 'BODY PART';
+  $scope.rightMeow = new Date();
+  $scope.boyname = "BOY'S NAME";
+  $scope.adjective = 'ADJECTIVE';
+  $scope.pluralnounone = 'PLURAL NOUN';
+  $scope.pluralnountwo= 'PLURAL NOUN';
+  $scope.insects = 'INSECT, PLURAL';
+  $scope.pluralnounthree = 'PLURAL NOUN';
+  $scope.verbed = 'VERB ENDING IN "ED"';
+  $scope.body = 'BODY PART';
   $scope.go = function(boyname, adjective, pluralnounone, pluralnountwo, insects, pluralnounthree, verbed, body) {
     for (var i = 0; i < arguments.length; i++) {
       arguments[i] = arguments[i].toUpperCase();
