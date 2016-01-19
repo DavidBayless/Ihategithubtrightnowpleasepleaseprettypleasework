@@ -1,0 +1,36 @@
+.highlight {
+  background-color: yellow;
+}
+
+div {
+  height: 10px;
+}
+
+
+.success {
+  color: green;
+}
+
+.failure {
+  color: red;
+}
+
+.container {
+  height: 300px;
+  width: 400px;
+  border: 5px solid black;
+  text-align: center;
+}
+
+.imgwrapper {
+  width: 200px;
+  height:100px;
+  text-align: center;
+  margin:auto;
+}
+
+.imgwrapper img {
+  height: inherit;
+  width: 100%;
+  overflow: hidden
+}

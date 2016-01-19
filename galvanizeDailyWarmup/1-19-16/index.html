@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="firstApp">
+<head>
+  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular.min.js'></script>
+  <script src='app.js'></script>
+  <link rel='stylesheet' href='angular0.css'>
+</head>
+<body>
+  <div ng-controller='MyFirstController'>
+    <h1>My name is: {{name}}</h1>
+    <input type='text' ng-model='name' placeholder="What is your name?">
+  </div>
+  <div ng-controller='ExercisesController'>
+    <h1>{{secondsInACentury}}</h1>
+    <h3>{{rightMeow | date}}</h3>
+
+    <div class='imgwrapper'>
+      <img src="http://artbyblas.com/writing/images/porky.png">
+    </div>
+
+    <label>Boy's Name</label>
+    <br>
+    <input type='text' ng-model='boyname' placeholder=''>
+    <br>
+    <label>Adjective</label>
+    <br>
+    <input type='text' ng-model='adjective' placeholder=''>
+    <br>
+    <label>Plural Noun</label>
+    <br>
+    <input type='text' ng-model='pluralnounone' placeholder=''>
+    <br>
+    <label>Plural Noun</label>
+    <br>
+    <input type='text' ng-model='pluralnountwo' placeholder=''>
+    <br>
+    <label>An Insect, Plural</label>
+    <br>
+    <input type='text' ng-model='insects' placeholder=''>
+    <br>
+    <label>Plural Noun</label>
+    <br>
+    <input type='text' ng-model='pluralnounthree' placeholder=''>
+    <br>
+    <label>Verb Ending in "ed"</label>
+    <br>
+    <input type='text' ng-model='verbed' placeholder=''>
+    <br>
+    <label>Body Part</label>
+    <br>
+    <input type='text' ng-model='body' placeholder=''>
+    <input type='checkbox' ng-model='checked'>
+    <button ng-click='go(boyname, adjective, pluralnounone, pluralnountwo, insects, pluralnounthree, verbed, body)'>Submit</button>
+    <div ng-model='madlib' ng-show='checked'>
+      <h3>{{sentenceOne}}</h3>
+      <h3>{{sentenceTwo}}</h3>
+      <h3>{{sentenceThree}}</h3>
+      <h3>{{sentenceFour}}</h3>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE>
+<html ng-app>
+<head>
+
+</head>
+<body>
+  <h1>Hello World!</h1>
+  <input type='text' ng-model='firstname' placeholder='First Name' ng-init='fname="Keenan"; firstname= fname'>
+  <input type='text' ng-model='lastname' placeholder='Last Name' ng-init='lname="Hoffman"; lastname= lname'>
+  <select ng-model='verb' ng-init='verb="sleep"'>
+    <option value='sleep'>Sleep</option>
+    <option value='rest your eyes'>Rest Your Eyes</option>
+    <option value='dream sweet dreams'>Dream Sweet Dreams</option>
+    <option value='go unconscious'>Go Unconcsious</option>
+  </select>
+  <select ng-model='location' ng-init='location = "https://s3.amazonaws.com/wbstaticfiles/users/3427/270483_empty-bed.jpg"'>
+    <option value='https://s3.amazonaws.com/wbstaticfiles/users/3427/270483_empty-bed.jpg'>Bed</option>
+    <option value='http://6336-presscdn-26-82.pagely.netdna-cdn.com/wp-content/uploads/2014/09/Coffin.png'>Coffin</option>
+    <option value='http://summercamppro.com/wp-content/uploads/2015/03/Candy-Land.jpg'>CandyLand</option>
+  </select>
+  <button ng-click='fname = firstname; lname = lastname'></button>
+  <p>I know where you {{ verb }}, {{ fname }} {{ lname }}</p>
+  <img src={{location}} height='400px' width='400px'>
+  {{ 3.14159265359 | currency: "€"}}
+  {{firstname | lowercase}}
+  {{lastname | uppercase}}
+  {{ 3.14159265359 | number: round}}
+  <select ng-model='round'>
+    <option value='4'>4</option>
+    <option value='5'>5</option>
+    <option value='6'>6</option>
+    <option value='7'>7</option>
+    <option value='8'>8</option>
+  </select>
+  <br>
+  <input type='text' ng-model='cost' placeholder='food cost here'>
+  <select ng-model='percent'>
+    <option value='.10'>10%</option>
+    <option value='.15'>15%</option>
+    <option value='.20'>20%</option>
+    <option value='.25'>25%</option>
+  </select>
+  <h1>The tip amount is {{ cost * percent | currency}}</h1>
+  <h1>The total amount equals {{ cost * (1 + percent) | currency}}</h1>
+
+  <label>Boy's Name</label>
+  <br>
+  <input type='text' ng-model='boyname' placeholder=''>
+  <br>
+  <label>Adjective</label>
+  <br>
+  <input type='text' ng-model='adjective' placeholder=''>
+  <br>
+  <label>Plural Noun</label>
+  <br>
+  <input type='text' ng-model='pluralnounone' placeholder=''>
+  <br>
+  <label>Plural Noun</label>
+  <br>
+  <input type='text' ng-model='pluralnountwo' placeholder=''>
+  <br>
+  <label>An Insect, Plural</label>
+  <br>
+  <input type='text' ng-model='insects' placeholder=''>
+  <br>
+  <label>Plural Noun</label>
+  <br>
+  <input type='text' ng-model='pluralnounthree' placeholder=''>
+  <br>
+  <label>Verb Ending in "ed"</label>
+  <br>
+  <input type='text' ng-model='verbed' placeholder=''>
+  <br>
+  <label>Body Part</label>
+  <br>
+  <input type='text' ng-model='body' placeholder=''>
+  <input type='checkbox' ng-model='checked'>
+  <div ng-model='madlib' ng-show='checked'>
+    <h3>One day, {{ boyname | uppercase }} was walking home from class. Suddenly,</h3>
+    <h3>a(n) {{ adjective | uppercase}} jackalope conservationist jumped out from behind the {{ pluralnounone | uppercase }}.</h3>
+    <h3>"Give me your {{ pluralnountwo | uppercase }} or I'll force you to eat these {{ insects | uppercase }}! </h3>
+    <h3>When suddenly, {{ pluralnounthree | uppercase }} came screaming by and {{ verbed | uppercase}} the conservationist in the {{ body | uppercase}}</h3>
+  </div>
+
+
+  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular.min.js'></script>
+</body>
+</html>
