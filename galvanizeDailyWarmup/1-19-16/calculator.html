@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular.min.js'></script>
+  <link rel='stylesheet' href='angular0.css'>
+</head>
+<body>
+  <h1>DON'T PANIC</h1>
+  <h1>what is the question?</h1>
+  <input type='number' ng-model='numone' placeholder="first value" ng-init='numone=0; numtwo=0; operator="+"'>
+  <select ng-model='operator'>
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+  </select>
+  <input type='number' ng-model='numtwo' placeholder="second value">
+  <h3 ng-init='finalval=0'>= {{finalval}}</h3>
+  <input type='submit' ng-show='operator == "+"' ng-click='finalval=numone + numtwo'>
+  <input type='submit' ng-show='operator == "-"' ng-click='finalval=numone - numtwo'>
+  <input type='submit' ng-show='operator == "*"' ng-click='finalval=numone * numtwo'>
+  <input type='submit' ng-show='operator == "/"' ng-click='finalval=numone / numtwo'>
+  <input type='submit' ng-click='finalval=0; numone=0; numtwo=0; operator="+"' value="Clear">
+  <h1>THE ANSWER IS 42</h1>
+  <h1 ng-show='finalval == 42'>THUS SPAKE THE SUPERCOMPUTER!!!</h1>
+  <div class='imgwrapper'>
+    <img src="https://s-media-cache-ak0.pinimg.com/736x/78/b6/c9/78b6c96713adb79578a675033646aa99.jpg">
+  </div>
+</body>
+</html>
